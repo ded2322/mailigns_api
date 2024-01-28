@@ -36,9 +36,9 @@ Mailings API - это API позволяющий создать рассылку
     ![изображение](https://github.com/ded2322/mailigns_api/assets/151318767/e73e7604-732b-492e-9b42-4e6565f4e175)
     Swagger Api
    
-2. Чтобы развернуть проект без Docker
+2. Разварачивание проекта без Docker
    - Установить Postgres
-   - В pgAdmin создать сервер
+   - В pgAdmin или другой субд создаете сервер
    - В папке задать созданные вами параметры mailigns_api/.env
    - Установить Redis-server
    - Запустить Redis-server,Selery и FastApi
@@ -46,4 +46,4 @@ Mailings API - это API позволяющий создать рассылку
 > В случае, если вы хотетие создать рассыку со своего email, необходимо изменить переменные EMAIL_SENDER (ваш email) и PASSWORD (пароль) этом видео показывается как получить пароль: https://youtu.be/g_j6ILT-X0k?si=UI97wkkUqBCFBKQh
 > 
 > Файл с переменными находится mailigns_api/mailing/config_email.py
-## Endpoint
+
