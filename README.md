@@ -11,7 +11,7 @@ Mailings API - это API позволяющий создать рассылку
 
 Фреймворк: FastApi
 
-Брокер сообщений: Selery
+Брокер сообщений: Celery
 
 База данных: Postgres
 
@@ -41,7 +41,7 @@ Mailings API - это API позволяющий создать рассылку
    - В pgAdmin или другой субд создаете сервер
    - В папке задать созданные вами параметры mailigns_api/.env
    - Установить Redis-server
-   - Запустить Redis-server,Selery и FastApi
+   - Запустить Redis-server,Сelery и FastApi
 > [!Note]
 > В случае, если вы хотетие создать рассыку со своего email, необходимо изменить переменные EMAIL_SENDER (ваш email) и PASSWORD (пароль) этом видео показывается как получить пароль: https://youtu.be/g_j6ILT-X0k?si=UI97wkkUqBCFBKQh
 > 
