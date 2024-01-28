@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:16
+    container_name: mailings_db
+    env_file:
+      - .env
+    ports:
+      - 5432:5432
+  redis:
+    image: redis:7
+    container_name: mailings_redis
+    ports:
+      - 6739:6739
+
+  mailings:
+    image: mailings
+    build:
+      context: .  # Здесь изменено на корень проекта
+      dockerfile: Dockerfile  # Указываем расположение Dockerfile относительно контекста
+    container_name: mailings_app
+    env_file:
+      - .env  # Если .env файл находится в корне проекта
+    depends_on:
+      - db
+      - redis
+
+    # Если не работает эта команда, используйте закомментированную
+    command: sh -c "alembic upgrade head && gunicorn app.main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000"
+    #command: ["mailing/docker/app.sh",]
+    ports:
+      - 9000:8000
+
+
+  celery:
+    image: mailings_celery
+    build:
+      context: .  # И здесь также изменено на корень проекта
+      dockerfile: Dockerfile  # И здесь указываем расположение Dockerfile
+    container_name: mailings_celery
+    # ... остальные настройки
+    command: sh -c "celery --app=app.tasks.celerys:celery worker -l INFO"
+    env_file:
+      - .env
+    depends_on:
+      - redis

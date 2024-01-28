@@ -10,18 +10,27 @@ router = APIRouter(prefix="/clients", tags=["Клиенты"])
 
 @router.get("/all_client")
 async def show_client():
+    """
+    Просмотр всех клиентов
+    """
     data_table = await ClientsDao.show_data_table()
     return data_table
 
 
 @router.post("/add_client")
 async def add_client(clients: SClients):
+    """
+    Добавление клиента
+    """
     await ClientsDao.insert_data(username=clients.name, email=clients.email)
     return {"message": "Клиент успешно добавлен"}
 
 
 @router.patch("/update_data")
 async def update_data(update: SUpdateData):
+    """
+    Обновляет email клиента
+    """
     data_user = await ClientsDao.found_one(id=update.id)
     if not data_user:
         raise HTTPException(status_code=404)
