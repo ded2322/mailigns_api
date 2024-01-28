@@ -1,3 +1,4 @@
+<img src=https://img.shields.io/badge/python-3.9-violet> <img src=https://img.shields.io/badge/linter-black-green>
 # Mailings API
 
 ## Описание
@@ -46,5 +47,3 @@ Mailings API - это API позволяющий создать рассылку
 > 
 > Файл с переменными находится mailigns_api/mailing/config_email.py
 ## Endpoint
-
-##
