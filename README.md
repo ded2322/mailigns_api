@@ -46,6 +46,9 @@ Mailings API - это API позволяющий создать рассылку
 > В случае, если вы хотетие создать рассыку со своего email, необходимо изменить переменные EMAIL_SENDER (ваш email) и PASSWORD (пароль) этом видео показывается как получить пароль: https://youtu.be/g_j6ILT-X0k?si=UI97wkkUqBCFBKQh
 > 
 > Файл с переменными находится mailigns_api/mailing/config_email.py
+
+## Файлы
+
 ## Запросы
 
 ### Http метод- Get
