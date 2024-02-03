@@ -34,7 +34,7 @@ Mailings API - это API позволяющий создать рассылку
     - И переходим по адресу http://localhost:7777/docs
       
     ![изображение](https://github.com/ded2322/mailigns_api/assets/151318767/e73e7604-732b-492e-9b42-4e6565f4e175)
-    Swagger Api
+    Демонстрация работы в Swagger Api
    
 2. Разварачивание проекта без Docker
    - Установить Postgres
