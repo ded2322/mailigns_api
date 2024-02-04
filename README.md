@@ -17,13 +17,12 @@ Mailings API - это API позволяющий создать рассылку
 
 ## Как развернуть
 1. Разворачивание с помощью Docker
-    - Скачиваете и устанавливаете Docker https://docs.docker.com/get-docker/.
-    - Как только скачан Docker, запускаем
+    - Устанавливаем Docker https://docs.docker.com/get-docker/.
     - Клонируем репозиторий
         ```
         https://github.com/ded2322/mailigns_api.git
         ```
-    - Перходим в его директорию
+    - Перходим в директорию
       ```
       cd mailigns_api
       ```
@@ -31,7 +30,7 @@ Mailings API - это API позволяющий создать рассылку
       ```
       docker-compose up --build
       ```
-    - И переходим по адресу http://localhost:7777/docs
+    - Все доступные методы находятся по адресу http://localhost:7777/docs
       
     ![изображение](https://github.com/ded2322/mailigns_api/assets/151318767/e73e7604-732b-492e-9b42-4e6565f4e175)
     Демонстрация работы в Swagger Api
