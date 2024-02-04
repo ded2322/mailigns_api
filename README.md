@@ -89,6 +89,8 @@ Response
     }
   }
 ```
+---
+
 ### Http метод - Post
 1.
 ```http
@@ -126,7 +128,9 @@ Request
   "text_message": "string"
 }
 ```
-### Остальные Http метода
+---
+
+### Остальные Http методы
 1. Метод для удаления клиента по id
 ```http
 DELETE /clients/delete_clients
