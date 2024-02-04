@@ -47,8 +47,6 @@ Mailings API - это API позволяющий создать рассылку
 > 
 > Файл с переменными находится mailigns_api/mailing/config_email.py
 
-## Структура
-
 ## Запросы
 
 ### Http метод- Get
