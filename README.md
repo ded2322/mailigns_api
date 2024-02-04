@@ -142,7 +142,7 @@ Request
 ```
 2. Метод для обнавления email клиента
 ```http
-PATH /clients/update_data
+PATCH /clients/update_data
 ```
 Request
 ```json
