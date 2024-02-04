@@ -73,7 +73,7 @@ Response
 GET /mailings/all
 ```
 Response
-```
+```json
  {
     "Mailings": {
       "email_client": "user@example.com",
@@ -92,33 +92,63 @@ Response
   }
 ```
 ### Http метод - Post
-В процессе доработки.
 1.
 ```http
 POST /clients/add_client
 ```
-Response
+Request
 ```json
+{
+  "name": "string",
+  "email": "user@example.com"
+}
 ```
 
 2.
 ```http
+POST /mailings/create_queue_mailings
 ```
-Response
+Request
 ```json
+{
+  "subject": "string",
+  "text_message": "string",
+  "scheduled_date": "DD-MM-YYYY HH:MM"
+}
 ```
 
 3.
 ```http
+POST /mailings/create_and_start_mailings
 ```
-Response
+Request
 ```json
+{
+  "subject": "string",
+  "text_message": "string"
+}
 ```
-
-4.
+### Остальные Http метода
+1. Метод для удаления клиента по id
 ```http
+DELETE /clients/delete_clients
 ```
-Response
+Request
 ```json
+{
+  "id": 0
+}
+```
+2. Метод для обнавления email клиента
+```http
+PATH /clients/update_data
+```
+Request
+```json
+{
+  "id": 0,
+  "name": "string",
+  "new_email": "user@example.com"
+}
 ```
    
