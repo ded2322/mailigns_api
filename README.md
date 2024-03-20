@@ -42,7 +42,7 @@ Mailings API - это API позволяющий создать рассылку
    - Установить Redis-server
    - Запустить Redis-server,Сelery и FastApi
 > [!Note]
-> В случае, если вы хотетие создать рассыку со своего email, необходимо изменить переменные EMAIL_SENDER (ваш email) и PASSWORD (пароль) этом видео показывается как получить пароль: https://youtu.be/g_j6ILT-X0k?si=UI97wkkUqBCFBKQh
+> Если вы хотите создать рассыку со своего email, необходимо изменить переменные EMAIL_SENDER (ваш email) и PASSWORD (пароль), гайд: https://youtu.be/g_j6ILT-X0k?si=UI97wkkUqBCFBKQh
 > 
 > Файл с переменными находится mailigns_api/mailing/config_email.py
 
