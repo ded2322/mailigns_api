@@ -2,7 +2,7 @@ import smtplib
 import logging
 
 from app.tasks.celerys import celery
-from app.mailing.config_email import *
+from app.config import settings
 from app.tasks.email_templates import create_email
 
 
@@ -13,8 +13,8 @@ def send_email(mailings: dict):
     """
     try:
         msg_content = create_email(mailings)
-        with smtplib.SMTP_SSL(host=HOST_SMTP, port=PORT_SMTP) as smtp:
-            smtp.login(EMAIL_SENDER, PASSWORD)
+        with smtplib.SMTP_SSL(host=settings.HOST_SMTP, port=settings.PORT_SMTP) as smtp:
+            smtp.login(settings.EMAIL_SENDER, settings.PASSWORD)
             content = msg_content
 
             # Отправляем сообщение и логируем ответ
