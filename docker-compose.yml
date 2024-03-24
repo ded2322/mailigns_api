@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:15
+    container_name: mailings_db
+    env_file:
+        - .env
+    volumes:
+      - postgres:/var/lib/postgres
+    ports:
+      - 5432:5432
+
+  mailings_service:
+    image: mailings_app
+    build:
+      context: .
+    command: sh -c "alembic upgrade head && uvicorn src.main:app --host 0.0.0.0 --port 8000"
+    ports:
+      - 8000:8000
+volumes:
+  postgres:
