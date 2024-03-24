@@ -1,5 +1,8 @@
 <img src=https://img.shields.io/badge/python-3.9-violet>
 
+> [!Note]
+> Рабочая версия находится в ветке master: https://github.com/ded2322/mailigns_api/tree/master
+
 # Mailings API
 
 ## Описание
